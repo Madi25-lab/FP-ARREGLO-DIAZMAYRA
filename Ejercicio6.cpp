@@ -23,12 +23,13 @@ int main(){
 	
 	int numeros[n];
 	
-	for (int i=2; i<n; i++){
+		for(int i=0;i<n;i++){
 		if(numeros[i]%2==0){
-			pares+= numeros[i];
+			pares+=numeros[i];
 		}else{
-			impares+= numeros[i];
+			impares+=numeros[i];
 		}
+		
 	}
 	
 	cout<< "La suma de numeros pares es: "<<pares<<endl;
@@ -36,6 +37,3 @@ int main(){
 	
 	return 0;
 }
-	
-	
-	
