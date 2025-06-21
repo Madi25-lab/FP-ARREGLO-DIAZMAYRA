@@ -2,13 +2,14 @@
 
 using namespace std;
 int main(){
-	int n;
-	int i,j;
-	string nombres[i];
+	int n,i,j;
+	string nombres[100];
+	string aux;
 	
 	cout<< "PROGRAMA PARA ORDENAR LOS NOMBRES ALFABETICAMENTE "<<endl ;
 		cout<< "Ingrese la cantidad de nombres: ";
 		cin>>n;
+		
 	
 	cout<<"\nIngreso de los "<< n << " nombres al arreglo: "<<endl;
 	for (i=0; i<n; i++){
@@ -17,13 +18,21 @@ int main(){
 	}
 	
 	for (i=0; i<n-1; i++){
-		for (j=i+1; j<n; j++){
-			if (nombres[i]> nombres[j+1]){
-			(nombres[j],nombres[j + 1]);
+		for (j=0; j<n-i-1; j++){
+			if(nombres[j]>nombres[j+1]){
+				aux=nombres[j];
+				nombres[j]=nombres[j+1];
+				nombres[j+1]=aux;
 			}
 		}
 	}
 	
+	cout<<endl;
+	cout<<"Los nombres ordenados alfabeticamente es de esta forma"<<endl;
+	for(i=0; i<n; i++){
+		cout<< nombres[i]<<endl;
+	}
 	
 	return 0;
 }
+	
