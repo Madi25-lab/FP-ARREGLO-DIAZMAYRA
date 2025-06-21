@@ -28,7 +28,7 @@ int main(){
 	}
 	
 	cout<<endl;
-	cout<<"Los nombres ordenados alfabeticamente es de esta forma"<<endl;
+	cout<<"Nombres ordenados alfabeticamente "<<endl;
 	for(i=0; i<n; i++){
 		cout<< nombres[i]<<endl;
 	}
