@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 int mistrcmp(char str1[], char str2[]) {
@@ -20,7 +19,6 @@ int mistrcmp(char str1[], char str2[]) {
 	}else{
 		return 1;
 	}
-
 } 
         
 int main(){
