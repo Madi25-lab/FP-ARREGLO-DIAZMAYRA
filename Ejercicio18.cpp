@@ -22,11 +22,14 @@ int main(){
 		i++;
 	}
 	
+	if(Cont != 0){
+		Parentesis = false;
+	}
 	if(Parentesis == true){
 		cout<<"El texto esta correctamente escrito";
 	}else if(Parentesis == false){
 		cout<<"El texto esta incorrectamente escrito";
 	}
 	
-		return 0;
+	return 0;
 	}
