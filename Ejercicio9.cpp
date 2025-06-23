@@ -23,10 +23,28 @@ int main(){
 	    }
     }
      cout<<"]";
+     cout<<endl;
      
-     for(i=0; i<n; i++){
-     	
-	 }
+    int Cambio=numeros[n-1];
+	
+	for(int i=n-1;i>=1;i--){
+        numeros[i]=numeros[i-1];
+    }
+
+	numeros[0]=Cambio;
+	
+	cout<<endl;
+	cout<< "El vector con un incremento de posicion a la derecha es: "<< endl;
+	cout<<"[";
+	for (i=0; i<n; i++){
+	cout<<numeros[i];
+	if(i<n-1){
+		cout<<";";
+	    }
+    }
+     cout<<"]";
+    
+     
      return 0;
  }
  
