@@ -21,5 +21,12 @@ int main(){
 		}
 		i++;
 	}
+	
+	if(Parentesis == true){
+		cout<<"El texto esta correctamente escrito";
+	}else if(Parentesis == false){
+		cout<<"El texto esta incorrectamente escrito";
+	}
+	
 		return 0;
 	}
