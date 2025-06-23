@@ -19,23 +19,29 @@ int mistrcmp(char str1[], char str2[]) {
 	}else{
 		return 1;
 	}
+
 } 
         
 int main(){
 	char str1[100];
-	int str2[100];
+	char str2[100];
 	int Similitud;
 	
-	cout<<"Ingrese una palabra para el primer arreglo: ";
-    cin>>str1;
-    cout<<"Ingrese una palabra para el segundo arreglo";
-    cin>>str2;
-    cout<<endl;
+	cout<<"Ingrese una palabra para el primer arreglo:  ";
+	cin>>str1;
+	cout<<"Ingrese una palabra para el segundo arreglo: ";
+	cin>>str2;
     
     Similitud = mistrcmp(str1, str2);
     
-
-	
+    if(Similitud == 0){
+		cout<<"["<<Similitud<<"]"<<" Las cadenas son iguales";
+	}else if(Similitud == 1){
+		cout<<"["<<Similitud<<"]"<<" La primera cadena es mayor";
+	}else if(Similitud == -1){
+		cout<<"["<<Similitud<<"]"<<" La segunda cadena es mayor ";
+	}
+    	
 	return 0;
 }
 
