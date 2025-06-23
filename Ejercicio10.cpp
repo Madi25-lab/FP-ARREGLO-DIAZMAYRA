@@ -4,13 +4,13 @@
 
 using namespace std;
 int main (){
-	int n,aux;
+	int n,aux, MO;
 	float M,P;
 	int numeros[30];
-	int suma=0;
+	int suma=0, c=0;
 	
 	srand(time(0));
-	cout<<"Los numeros generados aleatoriamente son:"<<endl;
+	cout<<"Los 30 numeros generados aleatoriamente son:"<<endl;
 	cout<<endl;
 	cout<<"(";
 	for(int i=0; i<30; i++){
@@ -39,17 +39,44 @@ int main (){
 			}
 		}
 	}
-	
-	cout<<"Orden"<<endl;
-	for(int i=0; i<30; i++){
-	cout<< numeros[i] <<endl;
-    }
-	
+	cout<<endl;
 	M=(numeros[14]+numeros[15])/2.0;
-	cout<<numeros[14];
-	cout<<numeros[15];
 	cout<<"La mediana es: "<<M<<endl;
-	return 0;
+	cout<<"Los numeros para hallar la mediana son: ";
+	cout<<numeros[14]<<" ; "<<numeros[15];
+	cout<<endl;
 	
+	MO = numeros[0];
+    int Cantidad = 1;
+	
+	for(int i=0; i<30; i++){
+		for(int j=0; j<30; j++){
+			if(numeros[i] == numeros[j]){
+				c++;
+			}
+		}
+		if(c>Cantidad){
+			Cantidad = c;
+			MO = numeros[i];
+		}
+	}
+	
+	MO=numeros[0];
+	int Rep=1,Cont=1;
+	
+	for(int i=0;i<30;i++){
+        for(int j=i+1;j<30;j++){
+            if(numeros[i]==numeros[j]){
+                Cont++;
+            }
+        }
+        if(Cont>Rep){
+            Rep=Cont;
+            MO=numeros[i];
+        }
+    }
+    cout<<endl;
+	cout<<"La moda es: "<<MO<<" se repite "<<Rep;
+	
+	return 0;
 }
-    
